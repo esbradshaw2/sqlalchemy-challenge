@@ -14,7 +14,7 @@ engine = create_engine("sqlite:///hawaii.sqlite")
 
 # reflect an existing database into a new model
 Base = automap_base()
-Base.prepare(engine, reflect=True)
+Base.prepare(engine, reflect=True, autoload_with=engine)
 
 # reflect the tables
 
